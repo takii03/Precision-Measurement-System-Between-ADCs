@@ -9,6 +9,7 @@ This project implements and compares two widely used ADC architectures: a Dual-S
 
 
 
+
 ## Objectives
 
 * Design and implement a precision voltage measurement system.
