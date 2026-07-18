@@ -3,11 +3,14 @@ Embedded systems project comparing Dual-Slope (ICL7107) and SAR (STM32F446RE) AD
 
 ## Overview
 
-Analog-to-Digital Converters (ADCs) play a critical role in embedded systems by converting analog signals into digital data for processing. Different ADC architectures offer unique advantages depending on application requirements such as speed, accuracy, and noise performance.
+Analog-to-Digital Converters (ADCs) are fundamental components in embedded systems, enabling microcontrollers to process real-world analog signals. Different ADC architectures provide different trade-offs in terms of conversion speed, measurement accuracy, implementation complexity, and noise immunity.
 
-This project implements and compares two widely used ADC architectures: a Dual-Slope ADC using the ICL7107 and a 12-bit Successive Approximation Register (SAR) ADC integrated within the STM32F446RE microcontroller. Both systems were developed and tested to study their performance, implementation complexity, and suitability for precision voltage measurement applications
+This project implements two different ADC architectures:
 
+- **ICL7107 Dual-Slope ADC**
+- **STM32F446RE Internal 12-bit SAR ADC**
 
+The objective is not only to build both measurement systems but also to understand the practical engineering considerations involved in analog hardware design and embedded firmware development.
 
 
 ## Objectives
@@ -140,9 +143,12 @@ The hardware prototype was tested using the same input voltage for both the ICL7
 
 ## Results
 
-The STM32F446RE-based SAR ADC demonstrated more stable measurements in the implemented prototype. The ICL7107 Dual-Slope ADC performance was influenced by breadboard parasitics, analog noise, and calibration limitations, resulting in larger measurement variations.
+The STM32F446RE SAR ADC successfully produced stable and repeatable voltage measurements throughout testing.
 
-These observations emphasize the importance of hardware implementation quality when evaluating ADC architectures and provide practical insight into the trade-offs between precision analog and embedded digital measurement systems.
+The ICL7107 implementation successfully demonstrated the Dual-Slope conversion principle. However, practical measurement accuracy was influenced by breadboard parasitic capacitance, analog noise, and calibration limitations.
+
+This project highlighted several practical engineering challenges encountered during analog circuit implementation and demonstrated the importance of PCB layout, power supply stability, and careful analog design in precision measurement systems.
+
 
 ## Challenges
 
